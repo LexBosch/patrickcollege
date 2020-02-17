@@ -4,7 +4,7 @@ import random
 
 def main():
     Entrez.email = "lexbosch@live.nl"  # Always tell NCBI who you are
-    random_amount_of_data = [str(random.randrange(1, 32000000)) for x in range(0, random.randrange(1400, 1600))]
+    random_amount_of_data = [str(random.randrange(22000000, 32000000)) for x in range(0, random.randrange(1400, 1600))]
     handle = Entrez.efetch(db="pubmed", id=random_amount_of_data, rettype="medline", retmode="xml")
     reed_data = Entrez.read(handle)
 
